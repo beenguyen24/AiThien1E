@@ -1,0 +1,128 @@
+<html>
+<head>
+    <title>Exercise 48 - Nguyễn Ngọc Ái Thiện</title>
+    <style> 
+        body { 
+            background-color: rgb(255, 240, 243); 
+            font-family: Arial, sans-serif;
+        } 
+        .container {
+            width: 600px; 
+            margin: auto; 
+            background-color: pink; 
+            padding: 20px; 
+            border: 2px solid red; 
+        } 
+        .header { 
+            text-align: center;
+            margin-bottom: 10px;
+        } 
+        h2 { 
+            text-align: center; 
+        } 
+        form { 
+            font-size: 14px;
+        } 
+        .form-group { 
+            margin: 5px 0; 
+        } 
+        textarea {
+             width: 100%; height: 60px;
+        } 
+        .buttons { 
+            text-align: center; 
+            margin-top: 15px; 
+        } 
+    </style>
+    <script>
+        function registerAlert() {
+            alert("Registration Successful!");
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+    <div align="center">
+        <img src="/ex48/images/Jackson.gif"><br>
+        <h2>Registration Form</h2>
+        <p>Register your Jackson Electronics product here</p>
+    </div>
+        <form>
+            <table cellpadding="5">
+                <tr>
+                    <td>First Name:</td>
+                    <td><input type="text" name="fname"></td>
+                    <td>Last Name:</td>
+                    <td><input type="text" name="lname"></td>
+                </tr>
+                <tr>
+                    <td>Address #1:</td>
+                    <td colspan="3"><input type="text" name="addr1" size="50"></td>
+                </tr>
+                <tr>
+                    <td>Address #2:</td>
+                    <td colspan="3"><input type="text" name="addr2" size="50"></td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td><input type="text" name="city"></td>
+                    <td>State:</td>
+                    <td><input type="text" name="state" size="5"> Zip: <input type="text" name="zip" size="6"></td>
+                </tr>
+                <tr>
+                    <td>Country:</td>
+                    <td colspan="3"><input type="text" name="country" value="United States"></td>
+                </tr>
+                <tr><td colspan="4"><hr></td></tr>
+
+                <tr>
+                    <td>Product:</td>
+                    <td colspan="3">
+                        <select name="product">
+                            <option>ScanMaster</option>
+                            <option>Printer</option>
+                            <option>Monitor</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date Purchased:</td>
+                    <td colspan="3"><input type="date" name="date"></td>
+                </tr>
+                <tr>
+                    <td>Serial #:</td>
+                    <td colspan="3"><input type="text" name="serial"></td>
+                </tr>
+                <tr>
+                    <td>Used for:</td>
+                    <td colspan="3">
+                        <input type="radio" name="used" value="Home"> Home
+                        <input type="radio" name="used" value="Education"> Educational Institution<br>
+                        <input type="radio" name="used" value="Business"> Business 
+                        <input type="radio" name="used" value="Other"> Other <br>
+                        <input type="radio" name="used" value="Government"> Government
+                    </td>
+                </tr>
+                <tr>
+                    <td>System (check all that apply):</td>
+                    <td colspan="3">
+                        <input type="checkbox" name="sys" value="Windows"> Windows
+                        <input type="checkbox" name="sys" value="Macintosh"> Macintosh <br>
+                        <input type="checkbox" name="sys" value="UNIX"> UNIX
+                        <input type="checkbox" name="sys" value="Other"> Other
+                    </td>
+                </tr>
+                <tr><td colspan="4"><hr></td></tr>
+                <tr>
+                    <td>Comments?:</td>
+                    <td colspan="3"><textarea name="comments" rows="4" cols="50"></textarea></td>
+                </tr>
+            </table>
+            <div class="buttons">
+            <input type="button" value="Click to register" onclick="registerAlert()">
+            <input type="reset" value="Click to cancel">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
