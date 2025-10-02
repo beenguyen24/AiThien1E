@@ -1,0 +1,89 @@
+<html>
+<head>
+    <title>Exercise 49 - Nguyễn Ngọc Ái Thiện</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+        .container {
+            width: 600px;
+            margin: auto;
+            background-color: aqua;
+            padding: 15px;
+            border: 2px solid blue;
+        }
+        h2 {
+            color: red;
+        }
+        hr {
+            border: 1px solid gray;
+        }
+        .buttons {
+            margin-top: 10px;
+            text-align: left;
+        }
+        .buttons input {
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function searchSimulation() {
+            alert("Search simulation started!");
+        }
+        function openHelp() {
+            window.open("help.html", "_blank");
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Online Classifieds Search Form</h2>
+        <hr>
+        <form>
+            <p><b> 1) Search for a classified in the following sections:</b></p>
+            <table>
+                <tr>
+                  <td><input type="radio" name="section" value="Employment"> Employment</td>
+                  <td><input type="radio" name="section" value="Personal"> Personal</td>
+                </tr>
+                <tr>
+                  <td><input type="radio" name="section" value="For Sale" checked> For Sale</td>
+                  <td><input type="radio" name="section" value="Misc"> Miscellaneous</td>
+                </tr>
+                <tr>
+                  <td><input type="radio" name="section" value="Housing"> Housing</td>
+                  <td><input type="radio" name="section" value="All"> All of the above</td>
+                </tr>
+              </table>
+            <p><b> 2) Search the following publications:</b></p>
+            <table>
+                <tr>
+                  <td><input type="checkbox" name="pub" value="Midwest" checked> Midwest Times</td>
+                  <td><input type="checkbox" name="pub" value="Modern"> Modern News</td>
+                  <td><input type="checkbox" name="pub" value="Employment"> Employment Today</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="pub" value="GreatLakes" checked> Great Lakes Classifieds</td>
+                  <td><input type="checkbox" name="pub" value="Middleton"> Middleton Daily</td>
+                  <td><input type="checkbox" name="pub" value="Cashtown"> Cashtown Daily News</td>
+                </tr>
+            </table>
+            <p><b>3) From to</b> 
+                <input type="date" name="from"> to 
+                <input type="date" name="to">
+            </p>
+            <p><b>4) Enter a few keywords to describe the classified.</b></p>
+            <input type="text" name="keywords" style="width:95%;">
+            <p><b>5) Click one of the options below:</b></p>
+            <div class="buttons">
+                <input type="image" src="/ex49/images/Search.gif" alt="Search" onclick="searchSimulation(); return false;">
+                <input type="image" src="/ex49/images/Help.gif" alt="Help" onclick="openHelp(); return false;">
+                <input type="image" src="/ex49/images/Cancel.gif" alt="Cancel" onclick="this.form.reset(); return false;">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
