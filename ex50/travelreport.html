@@ -1,0 +1,194 @@
+<html>
+<head>
+  <title>Exercise 50 - Nguyễn Ngọc Ái Thiện </title>
+  <style>
+    body {
+      background-color: #ccf7f7;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      width: 850px;
+      max-width: 95%;
+      margin: 0 auto;
+      background-color: #ccffff;
+      border: 2px solid #3a8ea5;
+      padding: 15px;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .logo img {
+      width: 400px;
+      height: auto;
+      border: 2px solid #999;
+    }
+    h2 {
+      text-align: left;
+      font-family: "Times New Roman", serif;
+      margin: 5px 0;
+      font-size: 22px;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid gray;
+      margin-bottom: 15px;
+    }
+    form {
+      width: 90%;
+      margin: auto;
+      background: #e6ffff;
+      padding: 15px;
+      border: 2px solid #5aa;
+      border-radius: 6px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    td {
+      padding: 5px;
+      vertical-align: top;
+    }
+    input[type="text"], textarea, select {
+      width: 95%;
+      padding: 4px;
+      border: 1px solid #999;
+      border-radius: 3px;
+    }
+    textarea {
+      resize: vertical;
+    }
+    th {
+      background-color: #bff2f2;
+    }
+    input[type="submit"], input[type="reset"] {
+      background-color: #d9f0ff;
+      border: 1px solid #666;
+      padding: 6px 12px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    input[type="submit"]:hover, input[type="reset"]:hover {
+      background-color: #c0e8ff;
+    }
+    .footer {
+      font-size: 13px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="/ex50/images/DeLong.jpg" alt="DeLong Enterprises">
+    </div>
+  <h2>Travel Expense Report</h2>
+  <hr>
+  <form onsubmit="alert('Form submitted!'); return false;">
+    <table>
+      <tr>
+        <td>1) First Name:</td>
+        <td><input type="text" name="firstname"></td>
+        <td>Last Name:</td>
+        <td><input type="text" name="lastname"></td>
+      </tr>
+      <tr>
+        <td>2) Social Security Number:</td>
+        <td colspan="3"><input type="text" name="ssn" style="width:98%;"></td>
+      </tr>
+      <tr>
+        <td>3) Department:</td>
+        <td colspan="3">
+          <select name="department">
+            <option>Accounting</option>
+            <option>HR</option>
+            <option>IT</option>
+            <option>Sales</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>4) Describe the purpose of your trip:</td>
+        <td colspan="3"><textarea name="purpose"></textarea></td>
+      </tr>
+    </table>
+    <br/>
+    <p>5) Itemize your travel expenses</p>
+    <table class="expense-table">
+      <tr>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Amount</th>
+      </tr>
+      <tr>
+        <td><input type="text" placeholder="mm/dd/yy"></td>
+        <td><input type="text"></td>
+        <td>
+          <select>
+            <option>Meal</option>
+            <option>Hotel</option>
+            <option>Transport</option>
+            <option>Other</option>
+          </select>
+        </td>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <td><input type="text" placeholder="mm/dd/yy"></td>
+        <td><input type="text"></td>
+        <td>
+          <select>
+            <option>Meal</option>
+            <option>Hotel</option>
+            <option>Transport</option>
+            <option>Other</option>
+          </select>
+        </td>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <td><input type="text" placeholder="mm/dd/yy"></td>
+        <td><input type="text"></td>
+        <td>
+          <select>
+            <option>Meal</option>
+            <option>Hotel</option>
+            <option>Transport</option>
+            <option>Other</option>
+          </select>
+        </td>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <td><input type="text" placeholder="mm/dd/yy"></td>
+        <td><input type="text"></td>
+        <td>
+          <select>
+            <option>Meal</option>
+            <option>Hotel</option>
+            <option>Transport</option>
+            <option>Other</option>
+          </select>
+        </td>
+        <td><input type="text"></td>
+      </tr>
+    </table>
+    <p class="radio-row">
+      6) Have you submitted your receipts?
+      <input type="radio" name="receipts" id="yes"><label for="yes"> Yes </label>
+      <input type="radio" name="receipts" id="no"><label for="no"> No </label>
+    </p>
+    <input type="submit" value="Submit travel expenses">
+    <input type="reset" value="Reset">
+    <p class="footer">
+      Questions? Contact Debbie Larson in Accounting (ext. 2150).
+    </p>
+  </form>
+</div>
+</body>
+</html>
