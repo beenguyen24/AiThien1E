@@ -1,0 +1,86 @@
+<html>
+<head>
+  <title>Exercise 52 - Nguyễn Ngọc Ái Thiện</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    .contact-box {
+      width: 600px;
+      border: 1px solid pink;
+      padding: 20px;
+    }
+    h2 {
+      margin-top: 0;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid pink;
+      border-radius: 4px;
+      margin-top: 5px;
+    }
+    textarea {
+      height: 100px;
+      resize: vertical;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .row .col {
+      flex: 1;
+    }
+    .btn {
+      margin-top: 15px;
+      background-color: #dd48a9;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div class="contact-box">
+    <h2>Contact the editorial office</h2>
+    <form action="getinf.html" method="get">
+        <label for="fullname">Full name</label>
+        <input type="text" id="fullname" name="fullname" required>
+        <div class="row">
+        <div class="col">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        </div>
+        <div class="col">
+          <label for="department">Send to</label>
+          <select id="department" name="department">
+                <option value="Editorial board">Editorial board</option>
+                <option value="News Department">News Department</option>
+                <option value="Board of Perspectives">Board of Perspectives</option>
+                <option value="World Board">World Board</option>
+                <option value="Business Department">Business Department</option>
+          </select>
+        </div>
+        </div>
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" required>
+        <label for="content">Content</label>
+        <textarea id="content" name="content"></textarea>
+        <button type="submit" class="btn">Send</button>
+    </form>
+</div>
+</body>
+</html>

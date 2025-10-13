@@ -1,0 +1,66 @@
+<html>
+<head>
+  <title>Ex52 - Nguyễn Ngọc Ái Thiện</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    .result-box {
+      width: 600px;
+      border: 1px solid pink;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px 6px;
+      border-bottom: 1px solid pink;
+    }
+    th {
+      width: 140px;
+      font-weight: bold;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 8px 16px;
+      background-color: #dd48a9;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="result-box">
+    <table>
+        <tr>
+            <th>Full name</th>
+            <td><script>document.write(new URLSearchParams(window.location.search).get('fullname'));</script></td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td><script>document.write(new URLSearchParams(window.location.search).get('email'));</script></td>
+        </tr>
+        <tr>
+            <th>Send to</th>
+            <td><script>document.write(new URLSearchParams(window.location.search).get('department'));</script></td>
+        </tr>
+        <tr>
+            <th>Title</th>
+            <td><script>document.write(new URLSearchParams(window.location.search).get('title'));</script></td>
+        </tr>
+        <tr>
+            <th>Content</th>
+            <td><script>document.write(new URLSearchParams(window.location.search).get('content'));</script></td>
+        </tr>
+    </table>
+    <a href="contact.html" class="btn"> Back</a>
+  </div>
+</body>
+</html>
+
