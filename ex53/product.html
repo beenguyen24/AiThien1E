@@ -1,0 +1,80 @@
+<html>
+<head>
+    <title>Exercise 53 - Nguyễn Ngọc Ái Thiện</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        }
+        table {
+        width: 600px;
+        border-collapse: collapse;
+        border: 1px solid #b03481;
+        }
+        th, td {
+        border: 1px solid #b03481;
+        padding: 8px;
+        text-align: left;
+        }
+        th {
+        background-color: #efadda;
+        }
+        input[type="text"] {
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+        }
+        .total-row {
+        text-align: right;
+        font-weight: bold;
+        }
+        .btn {
+        background-color: pink;
+        border: none;
+        padding: 8px 16px;
+        font-weight: bold;
+        cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form action="sum.html" method="get">
+    <table>
+    <tr>
+        <th>Part Number</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Qty</th>
+        <th>Item total</th>
+    </tr>
+    <tr>
+        <td>C112</td>
+        <td>Mouse</td>
+        <td>19.95$</td>
+        <td><input type="text" name="qty1"></td>
+        <td><input type="text" name="item1"></td>
+    </tr>
+    <tr>
+        <td>B124</td>
+        <td>Keyboard US</td>
+        <td>29.95$</td>
+        <td><input type="text" name="qty2"></td>
+        <td><input type="text" name="item2"></td>
+    </tr>
+    <tr>
+        <td>U125</td>
+        <td>USB KingMax</td>
+        <td>39.95$</td>
+        <td><input type="text" name="qty3"></td>
+        <td><input type="text" name="item3"></td>
+    </tr>
+    <tr>
+        <td colspan="4" class="total-row">Total:</td>
+        <td><input type="text" name="total"></td>
+    </tr>
+    </table>
+    <br/>
+    <input type="submit" value="Sum" class="btn">
+  </form>
+</body>
+</html>

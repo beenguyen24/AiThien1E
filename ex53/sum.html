@@ -1,0 +1,58 @@
+<html>
+<head>
+  <title>Ex53 - Nguyễn Ngọc Ái Thiện</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    table {
+      width: 600px;
+      border-collapse: collapse;
+      border: 1px solid #b03481;
+    }
+    th, td {
+      border: 1px solid #b03481;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #efadda;
+    }
+    .btn {
+      background-color: pink;
+      border: none;
+      padding: 8px 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body onload="showData()">
+  <h2>Order Summary</h2>
+  <table>
+    <tr><th>Part Number</th><th>Description</th><th>Quantity</th><th>Item Total</th></tr>
+    <tr><td>C112</td><td>Mouse</td><td id="qty1"></td><td id="item1"></td></tr>
+    <tr><td>B124</td><td>Keyboard US</td><td id="qty2"></td><td id="item2"></td></tr>
+    <tr><td>U125</td><td>USB KingMax</td><td id="qty3"></td><td id="item3"></td></tr>
+    <tr><td colspan="3" style="text-align:right;font-weight:bold;">Total:</td><td id="total"></td></tr>
+  </table>
+  <button class="btn" onclick="goBack()"> Back to Product Page</button>
+  <script>
+    function showData() {
+      const params = new URLSearchParams(window.location.search);
+      document.getElementById("qty1").innerText = params.get("qty1");
+      document.getElementById("qty2").innerText = params.get("qty2");
+      document.getElementById("qty3").innerText = params.get("qty3");
+      document.getElementById("item1").innerText = params.get("item1");
+      document.getElementById("item2").innerText = params.get("item2");
+      document.getElementById("item3").innerText = params.get("item3");
+      document.getElementById("total").innerText = params.get("total");
+    }
+    function goBack() {
+      window.location.href = "product.html";
+    }
+  </script>
+</body>
+</html>
